@@ -1,0 +1,248 @@
+a {
+    color: rgb(126, 126, 126);
+}
+
+/* Общие стили для шапки */
+.header {
+    width: 100%;
+    background: #D9D9D9;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Стили для логотипа */
+.header__logo {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Стили для навигационного блока */
+.header_nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Стили для ссылок в шапке */
+.header__link {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+/* Стили для ссылок при наведении */
+.header__link:hover {
+    color: #6e6e6e;
+}
+
+/* Стили для последнего элемента (телефона) */
+.header__link:last-child {
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    background-color: #9D9D9D;
+}
+
+.bl {
+    width: 100%; /* Растягиваем на всю ширину */
+    padding: 50px;
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
+    background-color: #898686;
+}
+
+.im {
+    padding: 50px;
+    max-width: 350px;
+    max-height: 350px;
+}
+
+.form {
+    width: 100%; /* Растягиваем на всю ширину */
+    padding: 50px;
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
+    background-color: #D9D9D9;
+}
+
+.home {
+    margin: 0;
+    background-image: url(cars.jpg);
+    background-size: cover;
+    background-image: url('cars.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.li {
+    font-size: 50px;
+    margin: 300px;
+}
+
+p {
+    color: #D9D9D9;
+}
+
+.submit {
+    
+}
+
+footer {
+    background-color: black;
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.but {
+    width: 200px;
+    padding: 15px;
+    border: 2px solid #fa8e00;
+    border-radius: 5px;
+    background-color: rgb(252, 151, 0);
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.marcs {
+    width: 100%; /* Растягиваем на всю ширину */
+    padding: 50px;
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
+    background-color: #585858;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header__link.active {
+    color: #fa8e00;
+    font-weight: bold;
+}
+
+/* Стили для бургер-меню */
+.header__menu-btn {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+   }
+   
+   .header__menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    margin: 5px 0;
+    transition: 0.3s;
+   }
+   
+   /* Стили для чекбокса */
+   #menu-toggle {
+    display: none;
+   }
+   
+   #menu-toggle:checked ~ .header_nav {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+   }
+   
+   #menu-toggle:checked ~ .header__menu-btn span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 5px;
+   }
+   
+   #menu-toggle:checked ~ .header__menu-btn span:nth-child(2) {
+    opacity: 0;
+   }
+   
+   #menu-toggle:checked ~ .header__menu-btn span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -5px;
+   }
+   
+   /* Адаптивные стили */
+   @media (max-width: 768px) {
+    .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    }
+    
+    .header__menu-btn {
+    display: block;
+    }
+    
+    .header_nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    }
+    
+    .header__link {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    }
+   }
+
+   @media (max-width: 768px) {
+    .header_nav a {
+    color: #333;
+    }
+    
+    .header_nav a:hover {
+    color: #6e6e6e;
+    }
+   }    
