@@ -229,6 +229,7 @@ footer {
     visibility: hidden;
     transition: 0.3s;
     }
+   
     
     .header__link {
     display: block;
@@ -246,3 +247,54 @@ footer {
     color: #6e6e6e;
     }
    }    
+
+   .contain {
+    display: grid;
+    column-gap: 50px;
+  }
+
+  .container {
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(138, 138, 138);
+    padding: 10px;
+  }
+  
+  .container > div {
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  img {
+    max-width: 350px;
+    max-height: 350px;
+  }
+
+     /* Адаптивные стили */
+     @media (max-width: 768px) {
+        .container {
+            display: grid;
+            column-gap: 5px;
+            grid-template-columns: auto;
+            background-color: rgb(138, 138, 138);
+            padding: 1px;
+          }
+    }
+
+    .myButton {
+        background-color: #cc9600; /* Зеленый цвет фона */
+        border: none;
+        color: rgb(0, 0, 0);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
